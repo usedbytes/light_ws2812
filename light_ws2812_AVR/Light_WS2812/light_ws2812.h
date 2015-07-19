@@ -39,6 +39,9 @@ struct cRGB { uint8_t g; uint8_t r; uint8_t b; };
 void ws2812_setleds    (struct cRGB *ledarray, uint16_t number_of_leds);
 void ws2812_setleds_pin(struct cRGB *ledarray, uint16_t number_of_leds,uint8_t pinmask);
 
+/* Set all LEDs to the same value. Data is GRB ordered data */
+void ws2812_setleds_constant(uint8_t *data, uint16_t leds);
+
 /* 
  * Old interface / Internal functions
  *
